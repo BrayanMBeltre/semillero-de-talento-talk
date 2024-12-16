@@ -20,7 +20,7 @@
 
 6. Renombrar el documento de tu curriculum a cv.pdf
 
-7. En otra pestana pegar este prompt en chat gpt y volver a este documento una vez termines.
+7. En otra pestaña pegar este prompt en chat gpt y volver a este documento una vez termines.
 
 ```
 Eres un estudiante de ingeniería de tics, haciendo fork de un template para una pagina personal, Hazme preguntas, una por una hasta completar los siguientes campos, en caso de las listas, si el usuario solo te da uno, síguele preguntándo hasta que termine.
