@@ -1,5 +1,7 @@
 ---
-import { personalInfo } from "../../CONFIG.json";
+import { getConfigFile } from "../data";
+
+const { personalInfo } = await getConfigFile();
 ---
 
 <a

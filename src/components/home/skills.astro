@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import { getConfigFile } from "../../data";
+
+const { skills } = await getConfigFile();
+---
+
+<div class="flex flex-wrap gap-12 md:gap-24">
+  {
+    skills.map(async (skill) => {
+      if (!skill) return null;
+
+      const initial = skill.charAt(0).toUpperCase();
+
+      let error = false;
+      let img = null;
+
+      try {
+        img = await fetch(
+          `https://cdn.simpleicons.org/${skill.toLowerCase().trim()}`
+        );
+
+        if (!img.ok) error = true;
+      } catch (error) {
+        error = true;
+      }
+
+      return (
+        <div class="flex flex-col items-center justify-center text-center">
+          <div class="h-16 w-16 border border-gray-200 rounded-full dark:border-neutral-700 flex items-center justify-center">
+            {error ? (
+              <div class="font-bold uppercase text-xl">{initial}</div>
+            ) : (
+              <Image
+                src={img.url}
+                alt={skill}
+                width={32}
+                height={32}
+                class="rounded-full object-contain"
+              />
+            )}
+          </div>
+
+          <p class="mb-1 text-sm font-medium dark:text-neutral-300">{skill}</p>
+        </div>
+      );
+    })
+  }
+</div>

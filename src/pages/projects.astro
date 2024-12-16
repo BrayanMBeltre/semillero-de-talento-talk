@@ -1,8 +1,10 @@
 ---
-import { projects } from "../../CONFIG.json";
 import PageHeading from "../components/page-heading.astro";
 import Project from "../components/project.astro";
+import { getConfigFile } from "../data";
 import Layout from "../layouts/main.astro";
+
+const { projects } = await getConfigFile();
 ---
 
 <Layout title="My Projects">
@@ -17,8 +19,6 @@ import Layout from "../layouts/main.astro";
     >
       {
         projects.map((project) => {
-          if (project.example) return;
-
           return (
             <Project
               name={project.name}

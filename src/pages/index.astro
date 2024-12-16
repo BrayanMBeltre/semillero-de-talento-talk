@@ -1,18 +1,20 @@
 ---
-import { personalInfo, skills } from "../../CONFIG.json";
-import { experiences } from "../../CONFIG.json";
 import AboutExperience from "../components/about-experience.astro";
 import Button from "../components/button.astro";
 import Projects from "../components/home/projects.astro";
 import Separator from "../components/home/separator.astro";
+import Skills from "../components/home/skills.astro";
+import { getConfigFile } from "../data";
 import Layout from "../layouts/main.astro";
+
+const { personalInfo, skills, experiences,projects } = await getConfigFile();
 ---
 
 <Layout title={personalInfo.firstName}>
   <div
-    class="relative z-20 w-full max-w-4xl mx-auto mt-16 px-7 md:mt-24 lg:mt-24 xl:px-0"
+    class="relative z-20 w-full max-w-4xl mx-auto px-7 md:mt-24 lg:mt-52 xl:px-0"
   >
-    <div class="flex flex-col items-center md:flex-row">
+    <div class="flex flex-col-reverse gap-4 items-center md:flex-row">
       <div class="relative w-full md:w-1/2">
         <h1
           class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white"
@@ -32,8 +34,9 @@ import Layout from "../layouts/main.astro";
           download={`cv-${personalInfo.firstName}.pdf`}
         />
       </div>
+
       <div
-        class="relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
+        class="relative justify-end w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
       >
         <div class="relative z-50 w-full">
           <div
@@ -53,7 +56,9 @@ import Layout from "../layouts/main.astro";
               src={"/foto.png"}
               loading="eager"
               decoding="auto"
+              alt={`${personalInfo.firstName} ${personalInfo.lastName}`}
               class="relative z-30 w-[400px] h-full mx-auto dark:-translate-y-0.5"
+              onerror="this.src='https://img.icons8.com/deco/500/person-male.png'"
             />
           </div>
           <div
@@ -65,68 +70,34 @@ import Layout from "../layouts/main.astro";
     </div>
   </div>
 
+  {skills.length > 0 && (
   <Separator text="Some of my skills" />
-  <section class="max-w-4xl mx-auto px-7 lg:px-0">
-    <h2
-      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
-    >
-      My Skills
-    </h2>
 
-    <div class="grid grid-cols-4 gap-8">
-      {
-        skills.map(async (skill) => {
-          const initial = skill.charAt(0).toUpperCase();
+      <section class="max-w-4xl mx-auto px-7 lg:px-0">
+        <h2 class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200">
+          My Skills
+        </h2>
 
-          let error = false;
-          let img = null;
+        <div class="py-10">
 
-          try {
-            img = await fetch(
-              `https://cdn.simpleicons.org/${skill.toLowerCase().trim()}`
-            );
+        <Skills />
+        </div>
+      </section>
+    )
+  }
 
-            if (!img.ok) error = true;
-          } catch (error) {
-            error = true;
-          }
-
-          return (
-            <div class="flex flex-col items-center justify-center text-center">
-              <div class="h-16 w-16 border border-gray-200 rounded-full dark:border-neutral-700 flex items-center justify-center">
-                {error ? (
-                  <div class="font-bold uppercase text-xl">{initial}</div>
-                ) : (
-                  <img
-                    src={img.url}
-                    alt={skill}
-                    class="w-8 h-8 rounded-full object-contain"
-                  />
-                )}
-              </div>
-
-              <p class="mb-1 text-sm font-medium dark:text-neutral-300">
-                {skill}
-              </p>
-            </div>
-          );
-        })
-      }
-    </div>
-  </section>
-
-  <Separator text="Some of my experiences" />
+{experiences.length > 0 && (
+<Separator text="Some of my experiences" />
   <section class="max-w-4xl mx-auto px-7 lg:px-0">
     <h2
       class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
     >
       Experience
     </h2>
+    
     <div class="px-5 py-10">
       {
         experiences.map((experience) => {
-          if (experience.example) return;
-
           return (
             <div class="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
               <AboutExperience
@@ -142,7 +113,11 @@ import Layout from "../layouts/main.astro";
       }
     </div>
   </section>
+)}
 
-  <Separator text="Check out my projects" />
+
+{projects.length > 0 && (
+<Separator text="Check out my projects" />
   <Projects />
+)}
 </Layout>

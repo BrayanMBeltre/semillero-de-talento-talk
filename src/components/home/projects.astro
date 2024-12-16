@@ -1,7 +1,9 @@
 ---
-import { projects } from "../../../CONFIG.json";
+import { getConfigFile } from "../../data";
 import Button from "../button.astro";
 import Project from "../project.astro";
+
+const { projects } = await getConfigFile();
 ---
 
 <section class="max-w-4xl mx-auto px-7 lg:px-0">
@@ -19,8 +21,6 @@ import Project from "../project.astro";
   >
     {
       projects.map((project) => {
-        if (project.example) return;
-
         return (
           <Project
             name={project.name}
