@@ -1,34 +1,74 @@
 {
   "personalInfo": {
-    "firstName": "Brayan",
-    "lastName": "Montaño",
-    "about": "Soy un desarrollador de software especializado en javascript y react.",
+    "firstName": "Robert",
+    "lastName": "Castillo",
+    "about": "Soy un apasionado del desarrollo de software, especializado en la creación de aplicaciones dinámicas utilizando tecnologías como JavaScript y React. Me encanta resolver problemas complejos a través de soluciones creativas y eficientes, siempre buscando aprender y crecer en el mundo tecnológico.",
     "birthDate": "1999-08-29",
-    "email": "brayanmbeltre@gmail.com",
-    "github": "https://github.com/brayanMBeltre"
+    "email": "alguienqueexiste@gmail.com",
+    "github": ""
   },
   "skills": [
-    "Javascript",
+    "JavaScript",
     "React",
-    "Graphql"
+    "Node.js"
   ],
   "experiences": [
     {
-      "dates": "2021",
+      "dates": "2020-2022",
       "role": "Frontend Developer",
       "company": "OGTIC",
-      "description": "Trabajé en proyectos como Becas.gob.do, Gob.do, 311, entre otros, realizando tareas de desarrollo frontend.",
-      "logo": "https://ogtic.gob.do/_next/image?url=https%3A%2F%2Fwp.ogtic.gob.do%2Fwp-content%2Fuploads%2F2024%2F01%2Flogo.png&w=3840&q=75",
-      "example": true
+      "description": "Trabajé en proyectos gubernamentales como portales web y sistemas de gestión, desarrollando interfaces dinámicas y optimizadas.",
+      "logo": "https://ogtic.gob.do/_next/image?url=https%3A%2F%2Fwp.ogtic.gob.do%2Fwp-content%2Fuploads%2F2024%2F01%2Flogo.png&w=3840&q=75"
+    },
+    {
+      "dates": "2018-2020",
+      "role": "Backend Developer",
+      "company": "Tecnología XYZ",
+      "description": "Diseñé y optimicé APIs RESTful para aplicaciones financieras, asegurando altos estándares de rendimiento y seguridad.",
+      "logo": "https://example.com/logo1.png"
+    },
+    {
+      "dates": "2022-2023",
+      "role": "Full Stack Developer",
+      "company": "StartUp Proyectos Innovadores",
+      "description": "Creé aplicaciones SaaS, integrando tecnologías como React y Express para soluciones de gestión empresarial.",
+      "logo": "https://example.com/logo2.png"
+    },
+    {
+      "dates": "2019-2020",
+      "role": "Mobile Developer",
+      "company": "App Solutions Inc.",
+      "description": "Desarrollé aplicaciones móviles para Android, utilizando frameworks híbridos como React Native.",
+      "logo": "https://example.com/logo3.png"
+    },
+    {
+      "dates": "2021",
+      "role": "DevOps Engineer",
+      "company": "Cloud Optimize",
+      "description": "Implementé pipelines CI/CD y administré la infraestructura en AWS, mejorando los tiempos de despliegue.",
+      "logo": "https://example.com/logo4.png"
+    },
+    {
+      "dates": "2020",
+      "role": "Data Analyst",
+      "company": "Insights & Data Analytics",
+      "description": "Analicé grandes volúmenes de datos y creé dashboards interactivos para la toma de decisiones estratégicas.",
+      "logo": "https://example.com/logo5.png"
+    },
+    {
+      "dates": "2021-2022",
+      "role": "QA Engineer",
+      "company": "Quality Tech",
+      "description": "Diseñé y ejecuté pruebas automatizadas, asegurando la calidad en plataformas web y móviles.",
+      "logo": "https://example.com/logo6.png"
+    },
+    {
+      "dates": "2023",
+      "role": "Project Manager",
+      "company": "Innovatech",
+      "description": "Coordiné equipos multidisciplinarios en el desarrollo de sistemas integrados para clientes corporativos.",
+      "logo": "https://example.com/logo7.png"
     }
   ],
-  "projects": [
-    {
-      "name": "Dynamic portfolio creation",
-      "description": "Crear un portafolio genérico a partir de un JSON para estudiantes del proyecto 'Semillero Digital' impartido en la OGTIC.",
-      "image": "https://ogtic.gob.do/_next/image?url=https%3A%2F%2Fwp.ogtic.gob.do%2Fwp-content%2Fuploads%2F2024%2F01%2Flogo.png&w=3840&q=75",
-      "url": "ogtic.gob.do",
-      "example": true
-    }
-  ]
+  "projects": []
 }
