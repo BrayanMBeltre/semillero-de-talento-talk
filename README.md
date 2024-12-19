@@ -63,7 +63,7 @@
 
 ### **4. Personalizar la Configuración con ChatGPT**
 
-1. Abre este [Prompt](https://chatgpt.com/share/6760b3ea-fc94-8003-b51b-6058631190d1) en una nueva pestaña.
+1. Abre este [Prompt](https://chatgpt.com/share/676416ea-27f0-8003-bf37-d9b4f98a76f1) en una nueva pestaña.
 
 2. Responde todas las preguntas y copia el resultado generado.
 
