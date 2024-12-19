@@ -101,11 +101,11 @@ const { personalInfo, skills, experiences, projects } = await getConfigFile();
               return (
                 <div class="pb-10 border-l border-gray-200 last:border-l-0 dark:border-neutral-700">
                   <AboutExperience
-                    dates={experience.dates}
+                    dates={experience.date}
                     role={experience.role}
                     company={experience.company}
                     description={experience.description}
-                    logo={experience.logo}
+                    logo={experience.companyLogoUrl}
                   />
                 </div>
               );

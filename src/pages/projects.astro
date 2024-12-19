@@ -23,8 +23,8 @@ const { projects } = await getConfigFile();
             <Project
               name={project.name}
               description={project.description}
-              image={project.image}
-              url={project.url}
+              image={project.ProjectThumbnailUrl}
+              url={project.projectUrl}
             />
           );
         })

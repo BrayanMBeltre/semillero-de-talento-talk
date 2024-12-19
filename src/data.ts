@@ -3,32 +3,37 @@ import path from "node:path";
 import exampleData from "../example.json";
 
 interface Data {
-	personalInfo?: {
-		firstName?: string;
-		lastName?: string;
-		about?: string;
-		birthDate?: string;
-		email?: string;
-		github?: string;
-		linkedin?: string;
+	personalInfo: {
+		firstName: string;
+		lastName: string;
+		about: string;
+		email: string;
+		githubProfileUrl: string;
+		linkedinProfileUrl?: string;
 	};
 	skills?: string[];
-	experiences?: {
-		dates?: string;
-		role?: string;
-		company?: string;
-		description?: string;
-		logo?: string;
-		example?: boolean;
-	}[];
-	projects?: {
-		name?: string;
-		description?: string;
-		image?: string;
-		url?: string;
-		example?: boolean;
-	}[];
+	experiences: Array<
+		| {
+				date: string;
+				role: string;
+				company: string;
+				description: string;
+				companyLogoUrl?: string;
+		  }
+		| undefined
+	>;
+
+	projects: Array<
+		| {
+				name: string;
+				description: string;
+				ProjectThumbnailUrl?: string;
+				projectUrl: "https://github.com/BrayanMBeltre/talento-workshop-template";
+		  }
+		| undefined
+	>;
 }
+[];
 
 export const getConfigFile = async () => {
 	try {

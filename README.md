@@ -7,9 +7,7 @@
    - Esto es necesario para crear una cuenta de GitHub y/o LinkedIn.
 
 2. **Contar con una foto profesional guardada como `foto.png`.**
-
-   - Recomendación: Usa una foto formal con fondo neutro.  
-     [Guía para fotos profesionales.](https://orientacion-laboral.infojobs.net/10-consejos-foto-cv)
+   [Guía para fotos profesionales.](https://orientacion-laboral.infojobs.net/10-consejos-foto-cv)
 
 3. **Contar con tu currículum vitae en formato PDF guardado como `cv.pdf`.**
    - Procura que sea actualizado y profesional.  
@@ -21,43 +19,45 @@
 
 1. Haz clic en el botón **"Fork"** en la parte superior derecha del repositorio.
 
-   > [¿Qué es un Fork?](https://docs.github.com/es/get-started/quickstart/fork-a-repo)
+   ![Forkear repositorio](public/tutorial/github-fork-repository.png)
 
-![Forkear repositorio](public/tutorial/github-fork-repository.png)
+   > [¿Qué es un Fork?](https://docs.github.com/es/get-started/quickstart/fork-a-repo)
 
 2. Luego, selecciona la opción **"Crear fork"**.
 
-![Crear Fork](public/tutorial/github-create-fork.png)
+   ![Crear Fork](public/tutorial/github-create-fork.png)
 
 3. Esperar a que temrine el proceso.
 
-![Wait](public/tutorial/github-wait-fork.jpeg)
+   ![Wait](public/tutorial/github-wait-fork.jpeg)
 
 4. Una vez terminado el proceso continuar con el siguiente paso.
 
-## ![Success fork](public/tutorial/github-success-fork.jpeg)
+   ![Success fork](public/tutorial/github-success-fork.jpeg)
 
 ### **2. Abrir el Editor de Código en GitHub**
 
-1. Para abrir el editor ve al En el repositorio recién creado ypresiona la tecla **"." (punto)** en tu teclado.
+1. Para abrir el editor ve al En el repositorio recién creado y presiona la tecla **`"." (punto)`** en tu teclado.
+
+   - En caso de que lo anterior no funciona cambia él **`.com`** en la URL por **`.dev`**.
 
    - Esto abrirá el editor de código en línea de GitHub.
 
-![Github online editor](public/tutorial/github-editor-initial-login.png)
+   ![Github online editor](public/tutorial/github-editor-initial-login.png)
 
 ---
 
 ### **3. Subir Archivos Necesarios**
 
-1. Localiza la carpeta `public` en el panel izquierdo del editor.
+1. Localiza la carpeta **`public`** en el panel izquierdo del editor.
 
-![Public folder](public/tutorial/github-editor-public-folder-location.jpeg)
+   ![Public folder](public/tutorial/github-editor-public-folder-location.jpeg)
 
-2. Arrastra y suelta los archivos `cv.pdf` y `foto.png` en esta carpeta.
+2. Arrastra y suelta los archivos **`cv.pdf`** y **`foto.png`** en esta carpeta.
 
-   - Revisa que los nombres sean exactamente como se indican para evitar errores.
+   - **Revisa que los nombres sean exactamente como se indican para evitar errores.**
 
-![Public folder files](public/tutorial/github-editor-public-folder-files.jpeg)
+   ![Public folder files](public/tutorial/github-editor-public-folder-files.jpeg)
 
 ---
 
@@ -67,11 +67,11 @@
 
 2. Responde todas las preguntas y copia el resultado generado.
 
-![Copy](public/tutorial/chatgpt-copy-and-paste.png)
+   ![Copy](public/tutorial/chatgpt-copy-and-paste.png)
 
 3. Regresa al editor y pega el resultado en el archivo `CONFIG.json`.
 
-![Config file](public/tutorial/github-editor-config-file.png)
+   ![Config file](public/tutorial/github-editor-config-file.png)
 
 ---
 
@@ -79,20 +79,20 @@
 
 1. En el panel izquierdo, haz clic en la sección **"Source Control"** (icono de rama).
 
-![Source control](public/tutorial/github-editor-source-control.jpeg)
+   ![Source control](public/tutorial/github-editor-source-control.jpeg)
 
 2. Escribe un mensaje claro sobre los cambios realizados, por ejemplo: _"Añadí mi configuración."_
 
-![Commit gessage](public/tutorial/github-editor-commit.jpeg)
+   ![Commit gessage](public/tutorial/github-editor-commit.jpeg)
 
 3. Quizas te aparezca un mensaje de confirmar cambios. Puedes cerrar este mensaje presionando el icono de X.
 
-![Confirm dialog](public/tutorial/github-editor-confirm-dialog.png)
+   ![Confirm dialog](public/tutorial/github-editor-confirm-dialog.png)
 
-3. Presiona el botón **"Confirmar y enviar cambios"** para subir los cambios.  
+4. Presiona el botón **"Confirmar y enviar cambios"** para subir los cambios.  
    [¿Qué es un commit en Git?](https://git-scm.com/docs/git-commit)
 
-![Push](public/tutorial/github-editor-commit-button.jpeg)
+   ![Push](public/tutorial/github-editor-commit-button.jpeg)
 
 ---
 
@@ -102,29 +102,29 @@
 
    - [Guía oficial de Vercel.](https://vercel.com/docs)
 
-![Vercel](public/tutorial/vercel-website.png)
+   ![Vercel](public/tutorial/vercel-website.png)
 
 2. Inicia sesión con tu cuenta de GitHub y acepta las solicitudes de acceso.
 
-![Vercel + github](public/tutorial/vercel-login-with-github.png)
+   ![Vercel + github](public/tutorial/vercel-login-with-github.png)
 
 3. Instalar Gibhub
 
-![Install github](public/tutorial/vercel-install-github.png)
+   ![Install github](public/tutorial/vercel-install-github.png)
 
-![Vercel + github permissions](public/tutorial/vercel-github-permissions.png)
+   ![Vercel + github permissions](public/tutorial/vercel-github-permissions.png)
 
-3. Selecciona tu repositorio y presiona el botón **"Import"**.
+4. Selecciona tu repositorio y presiona el botón **"Import"**.
 
-![Import repository](public/tutorial/vercel-import-repository.png)
+   ![Import repository](public/tutorial/vercel-import-repository.png)
 
-4. Haz clic en **"Deploy"** y espera a que termine el proceso.
+5. Haz clic en **"Deploy"** y espera a que termine el proceso.
 
-![Vercel Deploy](public/tutorial/vercel-deployment.png)
+   ![Vercel Deploy](public/tutorial/vercel-deployment.png)
 
-5. Una vez completado, copia la URL generada y verifica que tu página está activa.
+6. Una vez completado, copia la URL generada y verifica que tu página está activa.
 
-![Finish](public/tutorial/vercel-successfull-deployment.png)
+   ![Finish](public/tutorial/vercel-successfull-deployment.png)
 
 ---
 

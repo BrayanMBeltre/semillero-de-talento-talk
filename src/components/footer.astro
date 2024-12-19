@@ -23,9 +23,9 @@ const { personalInfo } = await getConfigFile();
       class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"
     >
       {
-        personalInfo.linkedin && (
+        personalInfo.linkedinProfileUrl && (
           <a
-            href={`${personalInfo.linkedin}`}
+            href={`${personalInfo.linkedinProfileUrl}`}
             target="_blank"
             class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
           >
@@ -47,9 +47,9 @@ const { personalInfo } = await getConfigFile();
       }
 
       {
-        personalInfo.github && (
+        personalInfo.githubProfileUrl && (
           <a
-            href={`${personalInfo.github}`}
+            href={`${personalInfo.githubProfileUrl}`}
             target="_blank"
             class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
           >
