@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "cp CONFIG.json public && astro check && astro build",
+    "build": "cp CONFIG.json public && astro check && astro build && rm public/CONFIG.json",
     "preview": "astro preview",
     "astro": "astro",
     "check": "biome check --apply-unsafe ."

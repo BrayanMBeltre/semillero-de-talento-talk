@@ -1,4 +1,6 @@
 ---
+import fs from "node:fs/promises";
+import path from "node:path";
 import AboutExperience from "../components/about-experience.astro";
 import Button from "../components/button.astro";
 import Projects from "../components/home/projects.astro";
@@ -8,6 +10,37 @@ import { getConfigFile } from "../data";
 import Layout from "../layouts/main.astro";
 
 const { personalInfo, skills, experiences, projects } = await getConfigFile();
+
+let imageUrl = "https://img.icons8.com/deco/500/person.png";
+
+const getImage = async () => {
+  const checkFileExists = async (p: string) => {
+    const url = path.resolve(import.meta.dirname, `../../public/${p}`);
+    try {
+      await fs.access(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  try {
+    if (await checkFileExists("foto.png")) {
+      imageUrl = "/foto.png";
+      console.log("png");
+    } else if (await checkFileExists("foto.jpg")) {
+      imageUrl = "/foto.jpg";
+      console.log("jpg");
+    } else if (await checkFileExists("foto.jpeg")) {
+      imageUrl = "/foto.jpeg";
+      console.log("jpeg");
+    }
+  } catch (e) {
+    console.log("error fetching images");
+  }
+};
+
+await getImage();
 ---
 
 <Layout title={personalInfo.firstName}>
@@ -53,12 +86,11 @@ const { personalInfo, skills, experiences, projects } = await getConfigFile();
           </div>
           <div class="relative z-30 px-10">
             <img
-              src={"/foto.png"}
+              src={imageUrl}
               loading="eager"
               decoding="auto"
               alt={`${personalInfo.firstName} ${personalInfo.lastName}`}
               class="relative z-30 w-[400px] h-full mx-auto dark:-translate-y-0.5"
-              onerror="this.src='https://img.icons8.com/deco/500/person-male.png'"
             />
           </div>
           <div
